@@ -32,17 +32,16 @@ export const Label = styled.label`
 export const Button = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
-  border: 1px solid royalblue;
-  background-color: royalblue;
+  border: 1px solid firebrick;
+  background-color: firebrick;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: yellow;
-    color: royalblue;
-    font-weight: bolder;
+    background-color: orange;
+    color: firebrick;
   }
 
   &:active {
