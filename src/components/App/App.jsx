@@ -1,41 +1,21 @@
-// import React from 'react';
-// import { ContactForm } from '../ContactForm/ContactForm';
-// import { Filter } from '../Filter/Filter';
-// import { ContactList } from '../ContactList/ContactList';
-// import { AppWrapper, Title } from './App.styled';
-
-// export const App = () => {
-//   return (
-//     <AppWrapper>
-//       <Title>Phonebook</Title>
-//       <ContactForm />
-//       <Title>Contacts</Title>
-//       <Filter />
-//       <ContactList />
-//     </AppWrapper>
-//   );
-// };
-
 import React from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import ContactsPage from 'pages/ContactsPage';
 import Register from 'pages/Register';
 import Login from 'pages/Login';
+import HomePage from 'pages/HomePage';
+import { Layout } from 'components/Layout/Layout';
 
 export const App = () => {
   return (
-    <>
-      <nav>
-        <NavLink to="/contacts">Contacts</NavLink>
-        <NavLink to="/register">Register</NavLink>
-        <NavLink to="/login">Login</NavLink>
-      </nav>
-      <Routes>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-      </Routes>{' '}
-    </>
+      </Route>
+    </Routes>
   );
 };
