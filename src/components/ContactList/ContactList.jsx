@@ -2,13 +2,13 @@ import { useEffect, useMemo } from 'react';
 import { ContactItem } from '../ContactItem/ContactItem';
 import { List } from './ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact, fetchContacts } from '../../redux/operations';
+import { deleteContact, fetchContacts } from 'redux/contacts/operations';
 import {
   selectContacts,
   selectError,
   selectFilter,
   selectIsLoading,
-} from '../../redux/selectors';
+} from 'redux/contacts/selectors';
 
 export const ContactList = () => {
   const contacts = useSelector(selectContacts);

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Notiflix from 'notiflix';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/operations';
 import { FormWrapper, Input, Label, Button } from './ContactForm.styled';
-import { selectContacts } from '../../redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
