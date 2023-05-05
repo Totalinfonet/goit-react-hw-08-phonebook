@@ -1,16 +1,11 @@
+import { LoginForm } from 'components/LoginForm/LoginForm';
+
 const Login = () => {
   return (
-    <form>
-      <label>
-        Email:
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Password:
-        <input type="password" name="password" required />
-      </label>
-      <button type="submit">Login</button>
-    </form>
+    <div>
+      <h1>Login</h1>
+      <LoginForm />
+    </div>
   );
 };
 
