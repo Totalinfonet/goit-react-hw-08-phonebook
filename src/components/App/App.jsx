@@ -7,6 +7,7 @@ import Login from 'pages/Login';
 import HomePage from 'pages/HomePage';
 import { Layout } from 'components/Layout/Layout';
 import { PrivateRoute } from 'components/PrivateRoute';
+import { RestrictedRoute } from 'components/RestictedRoute';
 
 export const App = () => {
   return (
@@ -19,8 +20,18 @@ export const App = () => {
             <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
           }
         />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<Register />} />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<Login />} />
+          }
+        />
       </Route>
     </Routes>
   );
