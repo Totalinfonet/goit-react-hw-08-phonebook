@@ -1,3 +1,4 @@
+import { Input, Button, FormControl, FormLabel, Box } from '@chakra-ui/react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 
@@ -17,16 +18,20 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
-        Email:
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        Password:
-        <input type="password" name="password" required />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <Box maxW="md" mx="auto" mt="8">
+      <form onSubmit={handleSubmit} autoComplete="off">
+        <FormControl mt="4" id="email" isRequired>
+          <FormLabel>Email:</FormLabel>
+          <Input type="email" name="email" />
+        </FormControl>
+        <FormControl mt="4" id="password" isRequired>
+          <FormLabel>Password:</FormLabel>
+          <Input type="password" name="password" />
+        </FormControl>
+        <Button type="submit" mt="4" colorScheme="blue">
+          Log In
+        </Button>
+      </form>
+    </Box>
   );
 };
