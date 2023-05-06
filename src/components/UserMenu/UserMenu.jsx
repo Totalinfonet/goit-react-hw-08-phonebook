@@ -8,11 +8,11 @@ export const UserMenu = () => {
   const { user } = useAuth();
 
   return (
-    <Box p={4}>
+    <Box p={4} display="inline-flex" alignItems="baseline">
       <Text fontSize="lg" fontWeight="bold" mb={2}>
         Welcome, {user.email}
       </Text>
-      <Button colorScheme="red" onClick={() => dispatch(logOut())}>
+      <Button colorScheme="red" ml={2} onClick={() => dispatch(logOut())}>
         Log Out
       </Button>
     </Box>
