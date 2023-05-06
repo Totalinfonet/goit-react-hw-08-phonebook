@@ -17,7 +17,7 @@ export const Navigation = () => {
           <Text fontSize="lg">Home</Text>
         </NavLink>
         {isLoggedIn && (
-          <NavLink to="/contacts" marginLeft="1rem">
+          <NavLink to="/contacts">
             <Text fontSize="lg">Contacts</Text>
           </NavLink>
         )}

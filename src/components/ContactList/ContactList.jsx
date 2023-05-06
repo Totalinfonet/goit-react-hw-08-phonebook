@@ -1,6 +1,5 @@
 import { useEffect, useMemo } from 'react';
 import { ContactItem } from '../ContactItem/ContactItem';
-import { List } from './ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact, fetchContacts } from 'redux/contacts/operations';
 import {
@@ -43,7 +42,7 @@ export const ContactList = () => {
   }
 
   return (
-    <List>
+    <ul>
       {filteredContacts.map(contact => (
         <ContactItem
           key={contact.id}
@@ -52,6 +51,6 @@ export const ContactList = () => {
           onDelete={() => handleDeleteContact(contact.id)}
         />
       ))}
-    </List>
+    </ul>
   );
 };

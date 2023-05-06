@@ -8,7 +8,12 @@ export const AppBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Box bg="gray.500" color="white" py={4} px={8}>
+    <Box
+      bgGradient="linear(to-l, #7928CA, #FF0080)"
+      color="white"
+      py={4}
+      px={8}
+    >
       <Flex alignItems="center">
         <Navigation />
         <Spacer />
